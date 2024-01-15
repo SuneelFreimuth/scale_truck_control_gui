@@ -12,9 +12,10 @@
 
   <build_depend>qtbase5-dev</build_depend>
   <build_depend>qt5-qmake</build_depend>
+  <build_depend>roslib</build_depend>
   <build_depend>roscpp</build_depend>
   <build_depend>std_msgs</build_depend>
-  <build_depend>std_srvs</build_depend>
+  <build_depend>scale_truck_control_msgs</build_depend>
 
   <exec_depend>libqt5-core</exec_depend>
   <exec_depend>libqt5-gui</exec_depend>

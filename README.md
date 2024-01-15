@@ -8,6 +8,7 @@ scale_truck_control_gui depends on:
 * ROS Melodic
 * OpenCV 4.4.0
 * Qt 5
+* [SuneelFreimuth/scale_truck_control_msgs](https://github.com/SuneelFreimuth/scale_truck_control_msgs), which provides all ROS custom messages used by SuneelFreimuth/scale_truck_control.
 
 ### Step 1: Install ROS Melodic
 
@@ -36,11 +37,11 @@ echo "source /opt/ros/melodic/setup.bash" >> ~/.bashrc
 source /opt/ros/melodic/setup.bash
 ```
 
-### Step 2: Installing OpenCV 4.4.0
+### Step 2: Install OpenCV 4.4.0
 
 TODO
 
-### Step 3: Installing Qt 5
+### Step 3: Install Qt 5
 
 TODO
 
@@ -53,13 +54,14 @@ cd ~/controller_ws/
 catkin_make
 ```
 
-Enter the source space and clone the repository:
+Enter the source space and clone this repository and SuneelFreimuth/scale_truck_control_msgs:
 ```
 cd src
 git clone https://github.com/SuneelFreimuth/scale_truck_control_gui/
+git clone https://github.com/SuneelFreimuth/scale_truck_control_msgs/
 ```
 
-### Step 5: Running the GUI
+### Step 5: Run the GUI
 
 Build the controller:
 ```

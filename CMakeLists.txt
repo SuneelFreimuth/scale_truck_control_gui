@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.0.2)
 project(scale_truck_control_gui)
 
-find_package(catkin REQUIRED)
+find_package(catkin REQUIRED std_msgs roscpp roslib)
 
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
@@ -15,6 +15,9 @@ find_package(Qt5 REQUIRED COMPONENTS Widgets)
 
 find_package(OpenCV 4.4.0 REQUIRED)
 include_directories( ${OpenCV_INCLUDE_DIRS} )
+
+set(THREADS_PREFER_PTHREAD_FLAG ON)
+find_package(Threads REQUIRED)
 
 catkin_package()
 
@@ -36,7 +39,9 @@ add_executable(gui_node
 )
 
 target_link_libraries(gui_node
+  ${catkin_LIBRARIES}
   Qt5::Widgets
   ${OpenCV_LIBS}
+  Threads::Threads
 )
 

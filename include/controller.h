@@ -6,7 +6,6 @@
 
 #include <QMainWindow>
 #include <QCloseEvent>
-#include <qTh.h>
 
 #include "ros/ros.h"
 

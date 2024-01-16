@@ -56,7 +56,7 @@ private slots:
 
     void on_pushButton_clicked();
 
-    cv::Mat display_Map(UDPsock::UDP_DATA value);
+    // cv::Mat display_Map(UDPsock::UDP_DATA value);
 
     void on_LVBox_activated(int index);
     void on_FV1Box_activated(int index);

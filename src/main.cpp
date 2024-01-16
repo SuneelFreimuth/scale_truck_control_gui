@@ -4,6 +4,8 @@
 #include <QLocale>
 #include <QTranslator>
 
+#include "ros/ros.h"
+
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
@@ -17,6 +19,8 @@ int main(int argc, char *argv[])
             break;
         }
     }
+
+    ros::init(argc, argv, "gui_controller");
     Controller w;
     w.show();
     return a.exec();

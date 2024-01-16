@@ -3,6 +3,8 @@ project(scale_truck_control_gui)
 
 find_package(catkin REQUIRED std_msgs roscpp roslib)
 
+# Enables the Qt Meta-Object Compiler (MOC) to run automatically
+# on files which use the macro Q_OBJECT.
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
 set(CMAKE_AUTOUIC ON)
@@ -28,7 +30,7 @@ include_directories(
 )
 link_directories(${catkin_LIBRARY_DIRS})
 
-add_executable(gui_node
+add_executable(gui_controller
   src/controller.ui
   src/main.cpp
   src/controller.cpp
@@ -37,8 +39,8 @@ add_executable(gui_node
   include/controller.h
   include/qTh.h
 )
-
-target_link_libraries(gui_node
+target_compile_features(gui_controller PRIVATE cxx_std_17)
+target_link_libraries(gui_controller
   ${catkin_LIBRARIES}
   Qt5::Widgets
   ${OpenCV_LIBS}

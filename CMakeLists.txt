@@ -34,10 +34,6 @@ add_executable(gui_controller
   src/controller.ui
   src/main.cpp
   src/controller.cpp
-  src/qTh.cpp
-  src/sock_udp.cpp
-  include/controller.h
-  include/qTh.h
 )
 target_compile_features(gui_controller PRIVATE cxx_std_17)
 target_link_libraries(gui_controller
